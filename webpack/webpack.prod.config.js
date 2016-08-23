@@ -13,7 +13,7 @@ module.exports = {
     chunkFilename: '[chunkhash].js'
   },
   plugins: [
-    new HtmlWebpackPlugin({template: path.resolve('template.html')}),
+    new HtmlWebpackPlugin({template: path.resolve('webpack/template.html')}),
     new CleanWebpackPlugin(['build'], {
       root: path.resolve('webpack'),
       verbose: true
