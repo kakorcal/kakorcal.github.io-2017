@@ -8,6 +8,9 @@ switch(process.env.npm_lifecycle_event){
   case 'prod':
     config = prod;
     break;
+  case 'deploy':
+    config = prod;
+    break;
   default:
     throw 'Invalid Command'
 }
