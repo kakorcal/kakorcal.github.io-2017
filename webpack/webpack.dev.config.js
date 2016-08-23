@@ -21,7 +21,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        include: /src/
+        include: /src/,
+        query: {
+          presets: ['react-hmre']
+        }
       },
       {
         test: /\.s?css$/,
