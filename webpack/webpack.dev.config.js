@@ -33,23 +33,26 @@ module.exports = {
       }, 
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff"
+        loader: "url?limit=10000&mimetype=application/font-woff&name=[name].[ext]"
       }, 
       {
         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff"
+        loader: "url?limit=10000&mimetype=application/font-woff&name=[name].[ext]"
       }, 
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/octet-stream"
+        loader: "url?limit=10000&mimetype=application/octet-stream&name=[name].[ext]"
       }, 
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file"
+        loader: "file?name=[name].[ext]"
       }, 
       {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=image/svg+xml"
+        test: /\.(jpe?g|png|gif|svg(\?v=\d+\.\d+\.\d+)?)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[name].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       }
     ]
   },
