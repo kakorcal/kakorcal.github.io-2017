@@ -7,8 +7,10 @@ module.exports = {
     app: path.resolve('src')
   },
   output: {
+    publicPath: '/',
     path: path.resolve('build'),
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[chunkhash].js'
   },
   plugins: [
     new HtmlWebpackPlugin({template: path.resolve('index.html')}),
