@@ -4,28 +4,37 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    
+    app: path.resolve('src')
   },
   output: {
-    filename: 'bundle.js',
     path: path.resolve('dist'),
-    publicPath: '/public'
+    filename: '[name].js'
   },
   module: {
     loaders: [
       {
         loader: 'babel-loader',
-        include: /public\/javascripts/,
+        include: /src/,
         test: /\.jsx?$/
       }
     ]
   },
   resolve: {
     extensions: ['', '.js', 'jsx']
-  }
+  },
   devServer: {
     inline: true,
     hot: true,
-    historyApiFallback: true
-  }
+    historyApiFallback: true,
+    stats: {
+      colors: true,
+      chunkModules: false
+    }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({template: path.resolve('webpack/template.html')}),    
+    new webpack.HotModuleReplacementPlugin({
+      muitiStep: true
+    })
+  ]
 };
