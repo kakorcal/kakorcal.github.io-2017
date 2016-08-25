@@ -28,13 +28,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
-        include: /(src|node_modules)/
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
-        include: /(src|node_modules)/
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
