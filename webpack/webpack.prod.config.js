@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sourceMap', 'sass-loader!sourceMap'),
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader'),
         include: /(src|node_modules)/
       },
       {
@@ -62,7 +62,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', 'jsx']
+    extensions: ['', '.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
