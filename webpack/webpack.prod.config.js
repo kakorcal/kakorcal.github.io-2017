@@ -72,7 +72,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new CleanWebpackPlugin(['build'], {
-      root: path.resolve('webpack'),
+      root: process.cwd(),
       verbose: true
     }),
     new ExtractTextPlugin('[name].[chunkhash].css')
