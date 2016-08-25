@@ -7,10 +7,9 @@ $white: #F8FDFF;
 $gray: #EEEEEE;
 $black: #333333;
 
-$logo-size: 60px;
-$dot-diameter: 10px;
-$line-size: 3px;
-$anime-time: 1s;
+$logoSize: 60px;
+$dotDiameter: 10px;
+$lineSize: 3px;
 
 html, body {
   background: $gray;
@@ -22,14 +21,14 @@ img {
 
 .logo {
   position: relative;
-  width: $logo-size;
-  height: $logo-size;
+  width: $logoSize;
+  height: $logoSize;
 }
 
 .k-line {
   display: block;
   position: absolute;
-  width: $line-size;
+  width: $lineSize;
   background: $black;
 }
 
@@ -64,8 +63,8 @@ img {
 .k-bar {
   display: block;
   position: absolute;
-  width: $dot-diameter;
-  border-radius: $dot-diameter/2;
+  width: $dotDiameter;
+  border-radius: $dotDiameter/2;
   border: 1px solid #000;
 }
 
@@ -100,17 +99,17 @@ img {
 
 @keyframes glide-horz {
   0% {
-    height: $line-size;
+    height: $lineSize;
   }
   100% {
-    height: $line-size;
+    height: $lineSize;
     width: 100%;
   }
 }
 
 @keyframes glide-vert {
   0% {
-    height: $line-size;
+    height: $lineSize;
   }
   100% {
     height: 100%;
