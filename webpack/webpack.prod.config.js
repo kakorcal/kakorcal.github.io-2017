@@ -27,10 +27,15 @@ module.exports = {
         include: /src/
       },
       {
-        test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract('style', 'css', 'sass'),
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
         include: /(src|node_modules)/
-      }, 
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader','css-loader','sass-loader'),
+        include: /(src|node_modules)/
+      },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url?limit=10000&mimetype=application/font-woff&name=[name].[hash].[ext]"

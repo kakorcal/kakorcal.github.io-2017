@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -27,7 +26,7 @@ module.exports = {
         }
       },
       {
-        test: /\.s?
+        test: /\.s?css$/,
         loaders: ['style', 'css', 'sass'],
         include: /(src|node_modules)/
       }, 
