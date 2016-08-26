@@ -1,15 +1,13 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~font-awesome/css/font-awesome.css';
 
-$green: #aafe88;
+$green: #0EBD9C;
 $blue: #46BEF2;
 $white: #F8FDFF;
 $gray: #EEEEEE;
 $black: #333333;
 
-$logoSize: 60px;
-$dotDiameter: 10px;
-$lineSize: 3px;
+$logo-size: 1em;
 
 html, body {
   background: $gray;
@@ -21,115 +19,4 @@ img {
 
 .logo {
   position: relative;
-  width: $logoSize;
-  height: $logoSize;
-}
-
-.k-line {
-  display: block;
-  position: absolute;
-  width: $lineSize;
-  background: $black;
-}
-
-.k-1, .k-3 {
-  animation: glide-horz 1s linear 0s 1 normal forwards;
-}
-
-.k-2, .k-4 {
-  animation: glide-vert 1s linear 0s 1 normal forwards;
-}
-
-.k-1 {
-  top: 0;
-  left: 0;
-}
-
-.k-2 {
-  top: 0;
-  right: 0;
-}
-
-.k-3 {
-  bottom: 0;
-  right: 0;
-}
-
-.k-4 {
-  bottom: 0;
-  left: 0;
-}
-
-.k-bar {
-  display: block;
-  position: absolute;
-  width: $dotDiameter;
-  border-radius: $dotDiameter/2;
-  border: 1px solid #000;
-}
-
-.k-a {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 18%;
-  height: 74%;
-}
-
-.k-b {
-  top: 7%;
-  left: 53%;
-  transform: rotate(48deg);
-  height: 52%;
-}
-
-.k-c {
-  top: 50%;
-  left: 56%;
-  transform: rotate(-53deg);
-  height: 41%;
-}
-
-.blueToGreen {
-  animation: blueToGreen 1s linear 0s 1 normal forwards;
-}
-
-.greenToBlue {
-  animation: greenToBlue 1s linear 0s 1 normal forwards;
-}
-
-@keyframes glide-horz {
-  0% {
-    height: $lineSize;
-  }
-  100% {
-    height: $lineSize;
-    width: 100%;
-  }
-}
-
-@keyframes glide-vert {
-  0% {
-    height: $lineSize;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes blueToGreen{
-  0% {
-    background: $blue;
-  }
-  100% {
-    background: $green;
-  }
-}
-
-@keyframes greenToBlue{
-  0% {
-    background: $green;
-  }
-  100% {
-    background: $blue;
-  }
 }
