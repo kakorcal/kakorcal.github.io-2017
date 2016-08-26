@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
 
 export default class Home extends Component {
   render(){
     return (
-      <div>Home</div>
+      <div>
+        <h3>Home</h3>
+        <div><Link to='/linguo'>Linguo</Link></div>
+      </div>
     );
   }
 }
