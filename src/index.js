@@ -1,22 +1,14 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import logo from './assets/k-logo.svg'
+import {Provider} from 'react-redux'
+import storeConfig from './redux/store'
+import RouterComponents from './routes'
 import './styles/base.scss'
 
-class App extends Component{
-  render(){
-    return (
-      <div className='container'>
-        <div className='logo-container'>
-          <div className='logo'>
-            <object>
-              <embed src={logo}/>
-            </object>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+const store = storeConfig({});
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    {RouterComponents}
+  </Provider>
+  , document.getElementById('root'));
