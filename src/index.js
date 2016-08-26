@@ -7,7 +7,6 @@ class App extends Component{
   render(){
     return (
       <div className='container'>
-        <h1>Logo</h1>
         <div className='logo-container'>
           <div className='logo'>
             <object>
