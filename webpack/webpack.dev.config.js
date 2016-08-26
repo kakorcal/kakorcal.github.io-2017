@@ -48,6 +48,10 @@ module.exports = {
         loader: "file?name=[name].[ext]"
       }, 
       {
+        test: /\.pdf$/,
+        loader: "file?name=[name].[ext]"
+      }, 
+      {
         test: /\.(jpe?g|png|gif|svg(\?v=\d+\.\d+\.\d+)?)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=[name].[ext]',
