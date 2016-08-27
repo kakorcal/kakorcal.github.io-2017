@@ -10,7 +10,7 @@ class Home extends Component {
     this.state = {
       siteVisited: false
     };
-    console.log('CONSTRUCTOR - INVOKED BEFORE COMPONENT WILL MOUNT');
+    console.log('CONSTRUCTOR - GET INITIAL STATE');
   }
   componentWillMount(){
     console.log('COMPONENT WILL MOUNT');
