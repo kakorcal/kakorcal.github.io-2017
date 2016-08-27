@@ -1,0 +1,98 @@
+.k-posts {
+  height: 100%;
+  padding: 10px 0 0px 10px;
+
+  .k-post {
+    height: 345px;
+    padding: 0 10px 10px 0;
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(0.97, 0.97);
+    }
+
+    .k-box {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+
+      .k-entry {
+        text-align: center;
+
+        .k-thumbnail img {
+          width: 280px;
+          height: 280px;
+          padding: 6px;
+          border-radius: 4px;
+          border: 1px solid $darkgray;
+          background-color: $white;
+          box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.25);
+        }
+
+        h5 {
+          color: $black;
+          margin: 20px;
+        }
+      }
+    }
+
+    .bounce-in {
+      animation-name: bounceIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.215, 0.310, 0.355, 1.000);      
+    }
+
+    @keyframes bounceIn {
+      from {
+        opacity: 0;
+        transform: translateY(1000px);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-30px);
+      }
+
+      75% {
+        transform: translateY(10px);
+      }
+
+      90% {
+        transform: translateY(-5px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .k-1 {
+    // border: 3px solid #82B1FF;
+    animation-delay: 0s;
+  }
+  .k-4 {
+    // border: 3px solid #FF9E80;
+    animation-delay: .1s;
+  }
+
+  .k-2 {
+    // border: 3px solid #2979FF;
+    animation-delay: .2s;
+  }
+  .k-5 {
+    // border: 3px solid #FF3D00;
+    animation-delay: .3s;
+  }
+  
+  .k-3 {
+    // border: 3px solid #2962FF;
+    animation-delay: .4s;
+  }
+  .k-6 {
+    // border: 3px solid #DD2C00;
+    animation-delay: .5s;
+  }
+}

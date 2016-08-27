@@ -1,10 +1,7 @@
 import {createStore, compose, applyMiddleware} from 'redux'
-import rootReducer from './reducers/index.js'
+import rootReducer from './reducers/index'
 import logger from 'redux-logger'
-
-const initialState = {
-  siteVisited: false
-};
+import initialState from './api'
 
 export default createStore(
   rootReducer,
