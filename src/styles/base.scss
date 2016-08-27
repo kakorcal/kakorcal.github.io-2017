@@ -76,13 +76,10 @@ html, body, #root, .k-wrapper {
       animation-name: bounceIn;
       animation-duration: 1s;
       animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.215, 0.310, 0.355, 1.000);
     }
 
-    @keyframes bounceIn{
-      from, 60%, 75%, 90%, to {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-      }
-
+    @keyframes bounceIn {
       from {
         opacity: 0;
         transform: translateY(1000px);
@@ -90,7 +87,7 @@ html, body, #root, .k-wrapper {
 
       60% {
         opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(-30px);
       }
 
       75% {
