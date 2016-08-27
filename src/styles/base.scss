@@ -65,7 +65,7 @@ html, body, #root, .k-wrapper {
   padding: 10px 0 0px 10px;
 
   .k-post {
-    height: 50%;
+    height: 345px;
     padding: 0 10px 10px 0;
 
     .k-box {
@@ -73,25 +73,64 @@ html, body, #root, .k-wrapper {
       height: 100%;
       background: $gray;
       display: block;
+      animation-name: bounceIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes bounceIn{
+      from, 60%, 75%, 90%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+
+      from {
+        opacity: 0;
+        transform: translateY(1000px);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+
+      75% {
+        transform: translateY(10px);
+      }
+
+      90% {
+        transform: translateY(-5px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
     }
   }
 
-  // .k-1 {
-  //   background: #82B1FF;
-  // }
-  // .k-2 {
-  //   background: #2979FF;
-  // }
-  // .k-3 {
-  //   background: #2962FF;
-  // }
-  // .k-4 {
-  //   background: #FF9E80;
-  // }
-  // .k-5 {
-  //   background: #FF3D00;
-  // }
-  // .k-6 {
-  //   background: #DD2C00;
-  // }
+  .k-1 {
+    // background: #82B1FF;
+    animation-delay: 0s;
+  }
+  .k-4 {
+    // background: #FF9E80;
+    animation-delay: .1s;
+  }
+
+  .k-2 {
+    // background: #2979FF;
+    animation-delay: .2s;
+  }
+  .k-5 {
+    // background: #FF3D00;
+    animation-delay: .3s;
+  }
+  
+  .k-3 {
+    // background: #2962FF;
+    animation-delay: .4s;
+  }
+  .k-6 {
+    // background: #DD2C00;
+    animation-delay: .5s;
+  }
 }
