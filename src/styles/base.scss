@@ -2,9 +2,10 @@
 @import '~font-awesome/css/font-awesome.css';
 
 $green: #1DE9B6;
-$white: #F8FDFF;
-$gray: #E6E6E6;
-$black: #5D5D5D;
+$white: #FFF;
+$gray: #ECECEC;
+$darkgray: #AAA;
+$black: #444;
 
 html, body, #root, .k-wrapper {
   height: 100%;
@@ -53,7 +54,7 @@ html, body, #root, .k-wrapper {
 
 
 .k-body {
-  background: $white;
+  background: $gray;
   flex: 1 100%;
   overflow: scroll;
 }
@@ -76,14 +77,26 @@ html, body, #root, .k-wrapper {
     .k-box {
       width: 100%;
       height: 100%;
-      padding: 10px;
-      border-radius: 7px;
       display: block;
       text-decoration: none;
 
-      h4 {
-        color: $white;
-        margin: 0;
+      .k-entry {
+        text-align: center;
+
+        .k-thumbnail img {
+          width: 280px;
+          height: 280px;
+          padding: 6px;
+          border-radius: 4px;
+          border: 1px solid $darkgray;
+          background-color: $white;
+          box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.25);
+        }
+
+        h5 {
+          color: $black;
+          margin: 20px;
+        }
       }
     }
 
@@ -120,29 +133,29 @@ html, body, #root, .k-wrapper {
   }
 
   .k-1 {
-    background: #82B1FF;
+    // border: 3px solid #82B1FF;
     animation-delay: 0s;
   }
   .k-4 {
-    background: #FF9E80;
+    // border: 3px solid #FF9E80;
     animation-delay: .1s;
   }
 
   .k-2 {
-    background: #2979FF;
+    // border: 3px solid #2979FF;
     animation-delay: .2s;
   }
   .k-5 {
-    background: #FF3D00;
+    // border: 3px solid #FF3D00;
     animation-delay: .3s;
   }
   
   .k-3 {
-    background: #2962FF;
+    // border: 3px solid #2962FF;
     animation-delay: .4s;
   }
   .k-6 {
-    background: #DD2C00;
+    // border: 3px solid #DD2C00;
     animation-delay: .5s;
   }
 }
