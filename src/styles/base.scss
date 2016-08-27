@@ -67,12 +67,24 @@ html, body, #root, .k-wrapper {
   .k-post {
     height: 345px;
     padding: 0 10px 10px 0;
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(0.97, 0.97);
+    }
 
     .k-box {
       width: 100%;
       height: 100%;
-      background: $gray;
+      padding: 10px;
+      border-radius: 7px;
       display: block;
+      text-decoration: none;
+
+      h4 {
+        color: $white;
+        margin: 0;
+      }
     }
 
     .bounce-in {
@@ -108,29 +120,29 @@ html, body, #root, .k-wrapper {
   }
 
   .k-1 {
-    // background: #82B1FF;
+    background: #82B1FF;
     animation-delay: 0s;
   }
   .k-4 {
-    // background: #FF9E80;
+    background: #FF9E80;
     animation-delay: .1s;
   }
 
   .k-2 {
-    // background: #2979FF;
+    background: #2979FF;
     animation-delay: .2s;
   }
   .k-5 {
-    // background: #FF3D00;
+    background: #FF3D00;
     animation-delay: .3s;
   }
   
   .k-3 {
-    // background: #2962FF;
+    background: #2962FF;
     animation-delay: .4s;
   }
   .k-6 {
-    // background: #DD2C00;
+    background: #DD2C00;
     animation-delay: .5s;
   }
 }

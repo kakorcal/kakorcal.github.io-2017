@@ -26,22 +26,46 @@ class Home extends Component {
     return (
       <div className='col k-posts'>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-1 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>1</Link>
+          <Link to='/wikirace' className={`k-box k-1 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>WIKIRACE</h4>
+            </div>
+          </Link>
         </div>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-2 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>2</Link>
+          <Link to='/angular_blog' className={`k-box k-2 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>ANGULAR BLOG</h4>
+            </div>
+          </Link>
         </div>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-3 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>3</Link>
+          <Link to='/linguo' className={`k-box k-3 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>LINGUO</h4>
+            </div>
+          </Link>
         </div>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-4 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>4</Link>
+          <Link to='/bomberman' className={`k-box k-4 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>BOMBERMAN</h4>
+            </div>
+          </Link>
         </div>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-5 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>5</Link>
+          <Link to='/michael_baca' className={`k-box k-5 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>MICHAEL BACA PHOTOGRAPHY</h4>
+            </div>
+          </Link>
         </div>
         <div className='col col-lg-4 col-md-6 k-post'>
-          <Link to='/linguo' className={`k-box k-6 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>6</Link>
+          <Link to='/sara_alterman' className={`k-box k-6 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+            <div>
+              <h4>SARA FAITH ALTERMAN</h4>
+            </div>
+          </Link>
         </div>          
       </div>
     );
