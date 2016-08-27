@@ -6,10 +6,13 @@ export default class Nav extends Component{
   render(){
     return (
       <div className='k-nav'>
-        <div className='k-about'>
+        <div className='k-about-desktop'>
           <h3>Thanks For Stopping By!</h3>
           <img src={thumbnail} height="215" width="215" alt="pic" />    
           <p>Hi, my name is Kenneth Korcal. I am a Front-End Web Developer based in San Francisco, California. You can check out my projects here. Have a nice day!</p>    
+        </div>
+        <div className='k-about-mobile'>
+          <h3>Kenneth Korcal - <small>Front-End Developer</small></h3>
         </div>
         <div className='k-contact'>
           <div>

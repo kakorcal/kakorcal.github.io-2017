@@ -24,7 +24,7 @@ html, body, #root, .k-wrapper {
   padding: 10px;
   overflow: scroll;
 
-  .k-about {
+  .k-about-desktop {
     color: $white;
 
     h3, p {
@@ -42,6 +42,10 @@ html, body, #root, .k-wrapper {
     }
   }
 
+  .k-about-mobile {
+    display: none;
+  }
+
   .k-contact {
     margin-top: 25px;
     text-align: left;
@@ -52,11 +56,66 @@ html, body, #root, .k-wrapper {
   }
 }
 
-
 .k-body {
   background: $gray;
   flex: 1 100%;
   overflow: scroll;
+}
+
+@media screen and (max-width: 1170px) {
+  .k-wrapper {
+    flex-flow: column;
+  }
+
+  .k-nav {
+    display: flex;
+    flex: none;
+
+    .k-about-mobile {
+      display: flex;
+      flex: 1;
+      text-align: left;
+      align-items: center;
+
+      h3 {
+        font-weight: 400;
+        margin: 0;
+      }
+
+      h3, small {
+        color: $white;
+      }
+    }
+
+    .k-about-desktop {
+      display: none;
+    }
+
+    .k-contact {
+      margin: 0;
+    }
+
+    .k-contact div {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .k-nav {
+    display: block;
+
+    .k-about-mobile, .k-contact {
+      display: block;
+      text-align: center;
+    }
+
+    .k-about-mobile h3 {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /* Home.js */

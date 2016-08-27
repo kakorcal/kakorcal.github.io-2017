@@ -26,7 +26,7 @@ class Home extends Component {
   render(){
     return (
       <div className='col k-posts'>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/wikirace' className={`k-box k-1 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
@@ -36,7 +36,7 @@ class Home extends Component {
             </div>
           </Link>
         </div>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/angular_blog' className={`k-box k-2 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
@@ -46,7 +46,7 @@ class Home extends Component {
             </div>
           </Link>
         </div>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/linguo' className={`k-box k-3 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
@@ -56,7 +56,7 @@ class Home extends Component {
             </div>
           </Link>
         </div>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/bomberman' className={`k-box k-4 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
@@ -66,7 +66,7 @@ class Home extends Component {
             </div>
           </Link>
         </div>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/michael_baca' className={`k-box k-5 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
@@ -76,7 +76,7 @@ class Home extends Component {
             </div>
           </Link>
         </div>
-        <div className='col col-lg-4 col-md-6 k-post'>
+        <div className='col col-md-4 col-sm-6 k-post'>
           <Link to='/sara_alterman' className={`k-box k-6 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
