@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import thumbnail from '../assets/thumbnail.png'
+import profile from '../assets/profile.png'
 import resume from '../assets/Kenneth_Korcal_Resume.pdf'
 
 export default class Nav extends Component{
@@ -8,7 +8,7 @@ export default class Nav extends Component{
       <div className='k-nav'>
         <div className='k-about-desktop'>
           <h3>Thanks For Stopping By!</h3>
-          <img src={thumbnail} height="215" width="215" alt="pic" />    
+          <img src={profile} height="215" width="215" alt="pic" />    
           <p>Hi, my name is Kenneth Korcal. I am a Front-End Web Developer based in San Francisco, California. You can check out my projects here. Have a nice day!</p>    
         </div>
         <div className='k-about-mobile'>
