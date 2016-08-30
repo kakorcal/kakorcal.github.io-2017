@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const AppCachePlugin = require('appcache-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -11,7 +12,8 @@ module.exports = {
       path.resolve('node_modules', 'bootstrap/dist/css', 'bootstrap.css'),      
       path.resolve('node_modules', 'font-awesome/css', 'font-awesome.css'),
       path.resolve('src/styles', 'base.scss')
-    ]
+    ],
+    vendor: ['react', 'react-router', 'redux', 'react-redux']
   },
   output: {
     publicPath: '/build/',
@@ -78,9 +80,15 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
     new CleanWebpackPlugin(['build'], {
       root: process.cwd(),
       verbose: true
+    }),
+    new AppCachePlugin({
+      exclude: ['.htaccess']
     }),
     new ExtractTextPlugin('[name].[chunkhash].css')
   ]

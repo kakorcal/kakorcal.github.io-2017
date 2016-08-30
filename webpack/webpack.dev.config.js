@@ -10,7 +10,8 @@ module.exports = {
       path.resolve('node_modules', 'bootstrap/dist/css', 'bootstrap.css'),      
       path.resolve('node_modules', 'font-awesome/css', 'font-awesome.css'),
       path.resolve('src/styles', 'base.scss')
-    ]
+    ],
+    vendor: ['react', 'react-router', 'redux', 'react-redux']
   },
   output: {
     path: path.resolve('dist'),
@@ -74,6 +75,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({template: path.resolve('webpack/template.html')}),    
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
     new webpack.HotModuleReplacementPlugin({
       muitiStep: true
     })
