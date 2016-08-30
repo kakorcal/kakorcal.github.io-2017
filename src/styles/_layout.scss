@@ -45,10 +45,6 @@ html, body, #root, .k-wrapper {
 
     div {
       margin-bottom: 10px;
-
-      a {
-        box-shadow: 1px 1px 5px 0 rgba(0,0,0,.20);
-      }
     }
   }
 
@@ -116,4 +112,10 @@ html, body, #root, .k-wrapper {
       margin-bottom: 10px;
     }
   }
+}
+
+.k-shadow {
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,.20);
+  border: 1px solid $darkgray;
+  color: $black;
 }

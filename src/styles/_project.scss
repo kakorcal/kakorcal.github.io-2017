@@ -1,7 +1,7 @@
 .project-container {
   padding: 0 30px;
   position: relative;
-  left: 1000px;
+  right: 1000px;
 }
 
 .fadeInLeft {
@@ -15,7 +15,25 @@
 
   100%{
     opacity: 1;
-    left: 0;
+    right: 0;
+  }
+}
+
+.k-panel {
+  margin-top: 20px;
+  padding: 6px;
+
+  h2 {
+    margin: 0;
+  }
+
+  .k-title-group {
+    display: flex;
+    justify-content: space-between;
+
+    div a:last-of-type {
+      margin-left: 10px;
+    }
   }
 }
 
@@ -26,9 +44,7 @@
     max-width: 100%;
     padding: 6px;
     border-radius: 4px;
-    border: 1px solid $darkgray;
     background-color: $white;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.20);
   }
 }
 
@@ -37,4 +53,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  div button:last-of-type {
+    margin-left: 10px;
+  }
 }

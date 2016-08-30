@@ -12,21 +12,21 @@ export default class Nav extends Component{
           <p>Hi, my name is Kenneth Korcal. I am a Front-End Web Developer based in San Francisco, California. You can check out my projects here. Have a nice day!</p>    
         </div>
         <div className='k-about-mobile'>
-          <h3>Kenneth Korcal - <small>Front-End Developer</small></h3>
+          <h3>Kenneth Korcal <small>- Front-End Developer</small></h3>
         </div>
         <div className='k-contact'>
           <div>
-            <a href='https://github.com/kakorcal' target='_blank' className='btn btn-default'>
+            <a href='https://github.com/kakorcal' target='_blank' className='btn btn-default k-shadow'>
               <i className='fa fa-github'></i> <span>GITHUB</span>
             </a>
           </div>
           <div>
-            <a href='https://www.linkedin.com/in/kennethkorcal' target='_blank' className='btn btn-default'>
+            <a href='https://www.linkedin.com/in/kennethkorcal' target='_blank' className='btn btn-default k-shadow'>
               <i className='fa fa-linkedin'></i> <span>LINKEDIN</span>
             </a>   
           </div>
           <div>
-            <a href={resume} target='_blank' className='btn btn-default'>
+            <a href={resume} target='_blank' className='btn btn-default k-shadow'>
               <i className='fa fa-file-text-o'></i> <span>RESUME</span>
             </a>
           </div>

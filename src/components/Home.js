@@ -32,60 +32,60 @@ class Home extends Component {
     return (
       <div className='col k-posts'>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/wikirace' className={`k-box k-1 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/wikirace' className={`k-box k-1 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={wikirace} alt="pic"/>
+                <img src={wikirace} alt="pic" className='k-shadow'/>
               </div>
               <h5>WIKIRACE</h5>
             </div>
           </Link>
         </div>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/angular_blog' className={`k-box k-2 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/angular_blog' className={`k-box k-2 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={angular_blog} alt="pic"/>
+                <img src={angular_blog} alt="pic" className='k-shadow'/>
               </div>
               <h5>ANGULAR BLOG</h5>
             </div>
           </Link>
         </div>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/linguo' className={`k-box k-3 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/linguo' className={`k-box k-3 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={linguo} alt="pic"/>
+                <img src={linguo} alt="pic" className='k-shadow'/>
               </div>
               <h5>LINGUO</h5>
             </div>
           </Link>
         </div>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/bomberman' className={`k-box k-4 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/bomberman' className={`k-box k-4 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={bomberman} alt="pic"/>
+                <img src={bomberman} alt="pic" className='k-shadow'/>
               </div>
               <h5>BOMBERMAN</h5>
             </div>
           </Link>
         </div>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/michael_baca' className={`k-box k-5 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/michael_baca' className={`k-box k-5 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={michael_baca} alt="pic"/>
+                <img src={michael_baca} alt="pic" className='k-shadow'/>
               </div>
               <h5>MICHAEL BACA PHOTOGRAPHY</h5>
             </div>
           </Link>
         </div>
         <div className='col col-md-4 col-sm-6 k-post'>
-          <Link to='/sara_alterman' className={`k-box k-6 ${this.state.siteVisited ? 'noAnimation' : 'bounce-in'}`}>
+          <Link to='/sara_alterman' className={`k-box k-6 ${this.state.siteVisited ? 'noAnimation' : 'bounceIn'}`}>
             <div className='k-entry'>
               <div className='k-thumbnail'>
-                <img src={sara_alterman} alt="pic"/>
+                <img src={sara_alterman} alt="pic" className='k-shadow'/>
               </div>
               <h5>SARA FAITH ALTERMAN</h5>
             </div>

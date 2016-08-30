@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
+import ReactDOM from 'react-dom'
+import {Link, browserHistory} from 'react-router'
 import {connect} from 'react-redux'
 import actions from '../redux/actions/index'
 import store from '../redux/store'
@@ -24,11 +25,11 @@ class Project extends Component {
     return images;
   }
 
-  setCurrentProject(){
+  setCurrentProject(current){
     let middleIdx;
     let project = this.props.projects.find((project, currentIdx)=>{
       middleIdx = currentIdx;
-      return project.pathname === this.props.location.pathname;
+      return project.pathname === current;
     });
     project.index = middleIdx;
     return project;
@@ -57,22 +58,41 @@ class Project extends Component {
     return images.map((prop, idx)=>{
       return (
         <div className='k-image-entry' key={idx}>
-          <img src={Images[prop]} alt="pic"/>
+          <img className='k-shadow' src={Images[prop]} alt="pic"/>
         </div>
       );
     });
   }
 
-  handleRouteChange(e, path){
-
-  }
-
-  componentWillMount(){
-    let project = this.setCurrentProject();
+  updateState(current){
+    let project = this.setCurrentProject(current);
     let prev = this.props.projects[this.getIndices(project.index).prevIdx];
     let next = this.props.projects[this.getIndices(project.index).nextIdx]; 
     let images = this.setImagePaths(project);
-    this.setState(Object.assign({}, {project, next, prev, images}));
+
+    return {project, next, prev, images};
+  }
+
+  handleRouteChange(e){
+    let newState;
+    switch(e.target.id){
+      case 'Prev':
+        browserHistory.push(this.state.prev.pathname);
+        newState = this.updateState(this.state.prev.pathname);
+        break;
+      case 'Next':
+        browserHistory.push(this.state.next.pathname);
+        newState = this.updateState(this.state.next.pathname);
+        break;
+      default:
+        break;
+    }
+
+    this.setState(Object.assign({}, newState));
+  }
+
+  componentWillMount(){
+    this.setState(Object.assign({}, this.updateState(this.props.location.pathname)));
   }
 
   componentDidMount(){
@@ -81,10 +101,32 @@ class Project extends Component {
     }
   }
 
+  componentDidUpdate(){
+    console.log('COMPONENT DID UPDATE');
+    ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
+  }
+
   render(){
     return (
-      <div className='project-container fadeInLeft'>
-        <h1>{this.state.project.projectname}</h1>
+      <div ref='project' className='project-container fadeInLeft'>
+        <div className='panel panel-default k-panel k-shadow'>
+          <div className='panel-body'>
+            <div className="k-title-group">
+              <div>
+                <h2>{this.state.project.projectname} <small> - {this.state.project.date}</small></h2>
+              </div>
+              <div>
+                <a href={this.state.project.github} target='_blank' className='btn btn-default k-shadow'>
+                  <i className='fa fa-github'></i> <span>GITHUB</span>
+                </a>
+                <a href={this.state.project.website} target='_blank' className='btn btn-default k-shadow'>
+                  <i className='fa fa-globe'></i> <span>WEBSITE</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
         <div className='image-list'>
           {
             this.createImages(this.state.images)
@@ -92,22 +134,24 @@ class Project extends Component {
         </div>
         <div className='k-btn-group'>
           <Link to='/'>
-            <button className='btn btn-default'>
+            <button className='btn btn-default k-shadow'>
               <i className='fa fa-home'></i> Back
             </button>
           </Link>
           <div>
             <button 
-              onClick={this.handleRouteChange.bind(this, this.state.prev.pathname)}
-              className='btn btn-default'
+              onClick={this.handleRouteChange.bind(this)}
+              className='btn btn-default k-shadow'
+              id='Prev'
             >
-              <i className='fa fa-arrow-left'></i> Prev -- {this.state.prev.projectname}
+              <i className='fa fa-arrow-left'></i> Prev
             </button>
             <button 
-              onClick={this.handleRouteChange.bind(this, this.state.next.pathname)}
-              className='btn btn-default'
+              onClick={this.handleRouteChange.bind(this)}
+              className='btn btn-default k-shadow'
+              id='Next'
             >
-              {this.state.next.projectname} -- Next <i className='fa fa-arrow-right'></i>
+              Next <i className='fa fa-arrow-right'></i>
             </button>
           </div>
         </div>
