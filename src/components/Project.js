@@ -83,7 +83,7 @@ class Project extends Component {
 
   render(){
     return (
-      <div className='project-container'>
+      <div className='project-container fadeInLeft'>
         <h1>{this.state.project.projectname}</h1>
         <div className='image-list'>
           {

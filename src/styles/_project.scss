@@ -1,5 +1,22 @@
 .project-container {
   padding: 0 30px;
+  position: relative;
+  left: 1000px;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 500ms ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+    left: 0;
+  }
 }
 
 .k-image-entry {
