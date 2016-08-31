@@ -8,6 +8,7 @@ import Images from './Images'
 
 class Project extends Component {
   constructor(props){
+    console.log('PROJECT GET INITIAL STATE');
     super(props);
     this.state = {
       project: null,
@@ -15,7 +16,6 @@ class Project extends Component {
       next: null,
       images: []
     };
-    console.log('PROJECT GET INITIAL STATE');
 
     // https://gist.github.com/Restuta/e400a555ba24daa396cc
     this.handleKeyPress = this.handleKeyPress.bind(this);

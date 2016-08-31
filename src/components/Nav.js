@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
 import profile from '../assets/profile.png'
 import resume from '../assets/Kenneth_Korcal_Resume.pdf'
 
@@ -11,12 +12,16 @@ export default class Nav extends Component{
     return (
       <div ref='nav' className='k-nav fadeIn'>
         <div className='k-about-desktop'>
-          <h3>Thanks For Stopping By!</h3>
+          <h3><Link to='/'>Thanks For Stopping By!</Link></h3>
           <img src={profile} height="200" width="200" alt="pic" />    
           <p>Hi, my name is Kenneth Korcal. I am a Front-End Web Developer based in San Francisco, California. You can check out my projects here. Have a nice day!</p>    
         </div>
         <div className='k-about-mobile'>
-          <h3>Kenneth Korcal <small>- Front-End Developer</small></h3>
+          <h3>
+            <Link to='/'>
+              Kenneth Korcal <small>- Front-End Developer</small>
+            </Link>
+          </h3>
         </div>
         <div className='k-contact'>
           <div>

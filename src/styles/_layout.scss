@@ -25,6 +25,11 @@ html, body, #root, .k-wrapper {
     h3 {
       font-weight: 400;
       font-size: 19px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
     }
 
     p {
@@ -90,8 +95,9 @@ html, body, #root, .k-wrapper {
         margin: 0;
       }
 
-      h3, small {
+      h3 a, small {
         color: $white;
+        text-decoration: none;
       }
     }
 
