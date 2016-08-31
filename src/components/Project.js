@@ -82,8 +82,14 @@ class Project extends Component {
 
   handleNextProject(e){
     console.log('HANDLE ROUTE CHANGE');
-    console.log('TARGET: ', e.target);
-    console.log('ID: ', e.target.id);
+    // console.log('TARGET: ', e.target);
+    // console.log('ID: ', e.target.id);
+    // bug fix: 
+    // when user clicks on the button with id it captures correctly
+    // however, if the user clicks on the <i> element, e.target becomes <i> which doesn't have 
+    // an id. there is several ways to solve this but for now i will set the state independently
+    // from the the event target by creating two separate callbacks for prev and next to ensure
+    // the state is updated correctly
     browserHistory.push(this.state.next.pathname);
     let newState = this.updateState(this.state.next.pathname);
     this.setState(Object.assign({}, newState));
