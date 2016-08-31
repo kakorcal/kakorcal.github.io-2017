@@ -111,7 +111,7 @@ class Project extends Component {
   render(){
     return (
       <div ref='project' className='project-container fadeInLeft'>
-        <div className='panel panel-default k-panel k-shadow'>
+        <div className='k-panel k-shadow'>
           <div className='panel-body'>
             <div className="k-title-group">
               <div>
