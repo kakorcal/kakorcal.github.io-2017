@@ -106,6 +106,7 @@ class Project extends Component {
       console.log('PROJECT DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
+    console.log('PROJECT STATE: ', this.state);
   }
 
   componentDidUpdate(){
@@ -113,6 +114,7 @@ class Project extends Component {
     ReactDOM.findDOMNode(this.refs.project).className = 'project-container';
     ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
     ReactDOM.findDOMNode(this.refs.project).className += ' fadeInLeft';
+    console.log('PROJECT STATE: ', this.state);
   }
 
   render(){
