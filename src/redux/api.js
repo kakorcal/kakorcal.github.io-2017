@@ -32,7 +32,7 @@ const api = {
       technologies: {
         front: ['Angular.js', 'Bootstrap'],
         back: ['Node.js', 'Express.js', 'Knex.js', 'PostgreSQL'],
-        tools: []
+        tools: ['Photoshop']
       }
     },
     {
@@ -83,7 +83,7 @@ const api = {
       technologies: {
         front: ['CSS', 'JQuery IOS Slider'],
         back: ['PHP'],
-        tools: ['Wordpress']
+        tools: ['Wordpress', 'Photoshop']
       }
     },
     {

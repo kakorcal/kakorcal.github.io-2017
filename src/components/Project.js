@@ -149,9 +149,12 @@ class Project extends Component {
               <div>
                 <p><strong>Technologies:</strong></p>
                 <ul>
-                  <li><strong>Front-End:</strong> {this.state.project.technologies.front.join(', ')}</li>
-                  <li><strong>Back-End:</strong> {this.state.project.technologies.back.join(', ')}</li>
-                  <li><strong>Tools:</strong> {this.state.project.technologies.tools.join(', ')}</li>
+                  <li>
+                    <strong>Front-End:</strong> {this.state.project.technologies.front.join(', ')}</li>
+                  <li>
+                    <strong>Back-End:</strong> {this.state.project.technologies.back.join(', ')}</li>
+                  <li>
+                    <strong>Tools:</strong> {this.state.project.technologies.tools.join(', ')}</li>
                 </ul>
               </div>
             </div>
