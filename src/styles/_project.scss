@@ -25,16 +25,22 @@
   background-color: #fff;
   border-radius: 4px;
 
-  h2 {
-    margin: 0;
-  }
-
   .k-title-group {
     display: flex;
     justify-content: space-between;
 
+    h2 {
+      margin: 0;
+    }
+
     div a:last-of-type {
       margin-left: 10px;
+    }
+  }
+
+  .k-desc-group {
+    strong{
+      font-weight: 500;
     }
   }
 }
@@ -58,5 +64,42 @@
 
   div button:last-of-type {
     margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .k-panel {
+    .k-title-group {
+      display: block;
+
+      div h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .k-desc-group {
+    display: none;
+
+  }
+}
+
+@media screen and (max-width: 415px){
+  .k-panel {
+    .panel-body {
+      padding: 15px 0;
+    }
+
+    .k-title-group {
+      text-align: center;
+
+      div h2 {
+        font-size: 24px;
+      }
+
+      small {
+        display: none;
+      }
+    }
   }
 }

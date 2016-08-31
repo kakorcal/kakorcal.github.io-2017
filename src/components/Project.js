@@ -130,21 +130,21 @@ class Project extends Component {
                 }
               </div>
             </div>
-            <hr/>
             <div className='k-desc-group'>
+              <hr/>
               <div>
-                <h5>Description:</h5>
+                <p><strong>Description:</strong></p>
                 <ul>
-                  <li>About: {this.state.project.description.about}</li>
-                  <li>Role: {this.state.project.description.role}</li>
+                  <li><strong>About:</strong> {this.state.project.description.about}</li>
+                  <li><strong>Role:</strong> {this.state.project.description.role}</li>
                 </ul>
               </div>
               <div>
-                <h5>Technologies:</h5>
+                <p><strong>Technologies:</strong></p>
                 <ul>
-                  <li>Front-End: {this.state.project.technologies.front.join(', ')}</li>
-                  <li>Back-End: {this.state.project.technologies.back.join(', ')}</li>
-                  <li>Tools: {this.state.project.technologies.tools.join(', ')}</li>
+                  <li><strong>Front-End:</strong> {this.state.project.technologies.front.join(', ')}</li>
+                  <li><strong>Back-End:</strong> {this.state.project.technologies.back.join(', ')}</li>
+                  <li><strong>Tools:</strong> {this.state.project.technologies.tools.join(', ')}</li>
                 </ul>
               </div>
             </div>
