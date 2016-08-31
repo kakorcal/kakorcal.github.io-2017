@@ -16,16 +16,16 @@ class Home extends Component {
     this.state = {
       siteVisited: false
     };
-    console.log('GET INITIAL STATE');
+    console.log('HOME GET INITIAL STATE');
   }
   componentWillMount(){
-    console.log('COMPONENT WILL MOUNT');
+    console.log('HOME COMPONENT WILL MOUNT');
     this.setState(store.getState());
   }
   componentDidMount(){
-    console.log('COMPONENT DID MOUNT');
+    console.log('HOME COMPONENT DID MOUNT');
     if(!this.state.siteVisited){
-      console.log('DISPATCH ACTION');
+      console.log('HOME DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
   }

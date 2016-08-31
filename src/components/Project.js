@@ -15,7 +15,7 @@ class Project extends Component {
       next: null,
       images: []
     };
-    console.log('PROJECT GET INITIAL STATE: ', this.state);
+    console.log('PROJECT GET INITIAL STATE');
   }
   
   setImagePaths(project){
@@ -74,30 +74,24 @@ class Project extends Component {
     return {project, next, prev, images};
   }
 
-  handleRouteChange(e){
-    console.log('HANDLE ROUTE CHANGE');
-    let newState;
-    switch(e.target.id){
-      case 'Prev':
-        browserHistory.push(this.state.prev.pathname);
-        newState = this.updateState(this.state.prev.pathname);
-        break;
-      case 'Next':
-        browserHistory.push(this.state.next.pathname);
-        newState = this.updateState(this.state.next.pathname);
-        break;
-      default:
-        break;
-    }
-    console.log('PROJECT NEW STATE: ', newState);
+  handlePrevProject(e){
+    browserHistory.push(this.state.prev.pathname);
+    let newState = this.updateState(this.state.prev.pathname);
     this.setState(Object.assign({}, newState));
-    console.log('PROJECT STATE: ', this.state);
+  }
+
+  handleNextProject(e){
+    console.log('HANDLE ROUTE CHANGE');
+    console.log('TARGET: ', e.target);
+    console.log('ID: ', e.target.id);
+    browserHistory.push(this.state.next.pathname);
+    let newState = this.updateState(this.state.next.pathname);
+    this.setState(Object.assign({}, newState));
   }
 
   componentWillMount(){
     console.log('PROJECT COMPONENT WILL MOUNT');
     this.setState(Object.assign({}, this.updateState(this.props.location.pathname)));
-    console.log('PROJECT STATE: ', this.state);
   }
 
   componentDidMount(){
@@ -106,7 +100,6 @@ class Project extends Component {
       console.log('PROJECT DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
-    console.log('PROJECT STATE: ', this.state);
   }
 
   componentDidUpdate(){
@@ -114,7 +107,6 @@ class Project extends Component {
     ReactDOM.findDOMNode(this.refs.project).className = 'project-container';
     ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
     ReactDOM.findDOMNode(this.refs.project).className += ' fadeInLeft';
-    console.log('PROJECT STATE: ', this.state);
   }
 
   render(){
@@ -172,16 +164,16 @@ class Project extends Component {
           </Link>
           <div>
             <button 
-              onClick={this.handleRouteChange.bind(this)}
+              onClick={this.handlePrevProject.bind(this)}
               className='btn btn-default k-shadow'
-              id='Prev'
+              id='prev'
             >
               <i className='fa fa-arrow-left'></i> Prev
             </button>
             <button 
-              onClick={this.handleRouteChange.bind(this)}
+              onClick={this.handleNextProject.bind(this)}
               className='btn btn-default k-shadow'
-              id='Next'
+              id='next'
             >
               Next <i className='fa fa-arrow-right'></i>
             </button>
