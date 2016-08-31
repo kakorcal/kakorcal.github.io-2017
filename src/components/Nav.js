@@ -4,7 +4,7 @@ import resume from '../assets/Kenneth_Korcal_Resume.pdf'
 
 export default class Nav extends Component{
   render(){
-    var rotater = {
+    let rotater = {
       transform: `rotate(${this.props.scroll}deg)`
     };
 

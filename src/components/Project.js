@@ -16,6 +16,9 @@ class Project extends Component {
       images: []
     };
     console.log('PROJECT GET INITIAL STATE');
+
+    // https://gist.github.com/Restuta/e400a555ba24daa396cc
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   
   setImagePaths(project){
@@ -51,6 +54,7 @@ class Project extends Component {
       default:
         prevIdx = middleIdx - 1;
         nextIdx = middleIdx + 1;
+        break;
     }
     return {prevIdx, nextIdx};
   }
@@ -74,25 +78,47 @@ class Project extends Component {
     return {project, next, prev, images};
   }
 
-  handlePrevProject(e){
-    browserHistory.push(this.state.prev.pathname);
-    let newState = this.updateState(this.state.prev.pathname);
+  handleButtonClick(e){
+    console.log('HANDLE BUTTON CLICK');
+    // bug fix: 
+      // when user clicks on the button with id it captures correctly
+      // however, if the user clicks on the <i> element, e.target becomes <i> which doesn't have 
+      // an id. there is several ways to solve this but i will use e.currentTarget to capture
+      // the parent container
+    let newState;
+    switch(e.currentTarget.id){
+      case 'prev':
+        browserHistory.push(this.state.prev.pathname);
+        newState = this.updateState(this.state.prev.pathname);
+        break;
+      case 'next':
+        browserHistory.push(this.state.next.pathname);
+        newState = this.updateState(this.state.next.pathname);
+        break;
+      default:
+        break;
+    }
+
     this.setState(Object.assign({}, newState));
   }
 
-  handleNextProject(e){
-    console.log('HANDLE ROUTE CHANGE');
-    // console.log('TARGET: ', e.target);
-    // console.log('ID: ', e.target.id);
-    // bug fix: 
-    // when user clicks on the button with id it captures correctly
-    // however, if the user clicks on the <i> element, e.target becomes <i> which doesn't have 
-    // an id. there is several ways to solve this but for now i will set the state independently
-    // from the the event target by creating two separate callbacks for prev and next to ensure
-    // the state is updated correctly
-    browserHistory.push(this.state.next.pathname);
-    let newState = this.updateState(this.state.next.pathname);
-    this.setState(Object.assign({}, newState));
+  handleKeyPress(e){
+    console.log('HANDLE KEY PRESS');
+    let newState;
+    switch(e.keyCode){
+      case 37:
+        browserHistory.push(this.state.prev.pathname);
+        newState = this.updateState(this.state.prev.pathname);
+        break;
+      case 39:
+        browserHistory.push(this.state.next.pathname);
+        newState = this.updateState(this.state.next.pathname);
+        break;
+      default:
+        break;
+    }
+    
+    if(newState) this.setState(Object.assign({}, newState));
   }
 
   componentWillMount(){
@@ -106,13 +132,20 @@ class Project extends Component {
       console.log('PROJECT DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
+
+    window.addEventListener('keydown', this.handleKeyPress);
   }
 
   componentDidUpdate(){
-    console.log('COMPONENT DID UPDATE');
+    console.log('PROJECT COMPONENT DID UPDATE');
     ReactDOM.findDOMNode(this.refs.project).className = 'project-container';
     ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
     ReactDOM.findDOMNode(this.refs.project).className += ' fadeInLeft';
+  }
+
+  componentWillUnmount(){
+    console.log('PROJECT COMPONENT WILL UNMOUNT');
+    window.removeEventListener('keydown', this.handleKeyPress);
   }
 
   render(){
@@ -173,14 +206,14 @@ class Project extends Component {
           </Link>
           <div>
             <button 
-              onClick={this.handlePrevProject.bind(this)}
+              onClick={this.handleButtonClick.bind(this)}
               className='btn btn-default k-shadow'
               id='prev'
             >
               <i className='fa fa-arrow-left'></i> Prev
             </button>
             <button 
-              onClick={this.handleNextProject.bind(this)}
+              onClick={this.handleButtonClick.bind(this)}
               className='btn btn-default k-shadow'
               id='next'
             >
