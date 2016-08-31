@@ -15,6 +15,7 @@ class Project extends Component {
       next: null,
       images: []
     };
+    console.log('PROJECT GET INITIAL STATE: ', this.state);
   }
   
   setImagePaths(project){
@@ -74,6 +75,7 @@ class Project extends Component {
   }
 
   handleRouteChange(e){
+    console.log('HANDLE ROUTE CHANGE');
     let newState;
     switch(e.target.id){
       case 'Prev':
@@ -87,16 +89,21 @@ class Project extends Component {
       default:
         break;
     }
-
+    console.log('PROJECT NEW STATE: ', newState);
     this.setState(Object.assign({}, newState));
+    console.log('PROJECT STATE: ', this.state);
   }
 
   componentWillMount(){
+    console.log('PROJECT COMPONENT WILL MOUNT');
     this.setState(Object.assign({}, this.updateState(this.props.location.pathname)));
+    console.log('PROJECT STATE: ', this.state);
   }
 
   componentDidMount(){
+    console.log('PROJECT COMPONENT DID MOUNT');
     if(!this.props.siteVisited){
+      console.log('PROJECT DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
   }
