@@ -5,7 +5,10 @@ const api = {
       pathname: '/wikirace',
       projectname: 'Wikirace',
       date: 'Jul 2016',
-      description: '',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 5,
       github: 'https://github.com/kakorcal/wikirace',
       website: 'http://wikirace.herokuapp.com/',
@@ -19,20 +22,27 @@ const api = {
       pathname: '/angular_blog',
       projectname: 'Angular Blog',
       date: 'Jun 2016',
-      description: '',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 3,
       github: 'https://github.com/kakorcal/angular_blog',
       website: '',
       technologies: {
         front: ['Angular.js', 'Bootstrap'],
-        back: ['Node.js', 'Express.js', 'Knex.js', 'PostgreSQL']
+        back: ['Node.js', 'Express.js', 'Knex.js', 'PostgreSQL'],
+        tools: []
       }
     },
     {
       pathname: '/linguo',
       projectname: 'Linguo',
       date: 'Apr 2016',
-      description: '',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 3,
       github: 'https://github.com/kakorcal/linguo',
       website: 'https://linguoisdead.herokuapp.com/',
@@ -46,7 +56,10 @@ const api = {
       pathname: '/bomberman',
       projectname: 'Bomberman',
       date: 'Mar 2016',
-      description: '',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 0,
       github: 'https://github.com/kakorcal/bomberman',
       website: '',
@@ -60,7 +73,10 @@ const api = {
       pathname: '/michael_baca',
       projectname: 'Michael Baca Photography',
       date: 'Dec 2015',
-      description: '',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 3,
       github: 'https://github.com/kakorcal/michael_baca',
       website: 'http://michaelbaca.com/',
@@ -74,10 +90,13 @@ const api = {
       pathname: '/sara_alterman',
       projectname: 'Sara Faith Alterman',
       date: 'Oct 2015',
-      description: 'http://sarafaithalterman.com/',
+      description: {
+        about: 'alkdjfl;adskfjads',
+        role: 'aljdfkj;ladskfjadfadf'
+      },
       imagecount: 2,
       github: 'https://github.com/kakorcal/sara_alterman',
-      website: '',
+      website: 'http://sarafaithalterman.com/',
       technologies: {
         front: ['CSS'],
         back: ['PHP'],

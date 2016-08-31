@@ -103,7 +103,9 @@ class Project extends Component {
 
   componentDidUpdate(){
     console.log('COMPONENT DID UPDATE');
+    ReactDOM.findDOMNode(this.refs.project).className = 'project-container';
     ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
+    ReactDOM.findDOMNode(this.refs.project).className += ' fadeInLeft';
   }
 
   render(){
@@ -124,7 +126,24 @@ class Project extends Component {
                 </a>
               </div>
             </div>
-
+            <hr/>
+            <div className='k-desc-group'>
+              <div>
+                <h5>Description:</h5>
+                <ul>
+                  <li>About: {this.state.project.description.about}</li>
+                  <li>Role: {this.state.project.description.role}</li>
+                </ul>
+              </div>
+              <div>
+                <h5>Technologies:</h5>
+                <ul>
+                  <li>Front-End: {this.state.project.technologies.front.join(', ')}</li>
+                  <li>Back-End: {this.state.project.technologies.back.join(', ')}</li>
+                  <li>Tools: {this.state.project.technologies.tools.join(', ')}</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div className='image-list'>
