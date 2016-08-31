@@ -25,6 +25,7 @@ class Home extends Component {
   componentDidMount(){
     console.log('COMPONENT DID MOUNT');
     if(!this.state.siteVisited){
+      console.log('DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
   }

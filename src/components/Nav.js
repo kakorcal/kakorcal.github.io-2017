@@ -9,7 +9,7 @@ export default class Nav extends Component{
     };
 
     return (
-      <div ref='nav' className='k-nav'>
+      <div ref='nav' className='k-nav fadeIn'>
         <div className='k-about-desktop'>
           <h3>Thanks For Stopping By!</h3>
           <img src={profile} height="200" width="200" alt="pic" />    

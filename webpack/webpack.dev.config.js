@@ -11,7 +11,7 @@ module.exports = {
       path.resolve('node_modules', 'font-awesome/css', 'font-awesome.css'),
       path.resolve('src/styles', 'base.scss')
     ],
-    vendor: ['react', 'react-router', 'redux', 'react-redux']
+    vendor: ['react', 'react-router', 'react-dom', 'redux', 'react-redux']
   },
   output: {
     path: path.resolve('dist'),

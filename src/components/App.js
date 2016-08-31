@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import {connect} from 'react-redux'
+import store from '../redux/store'
 import Nav from './Nav'
 
-export default class App extends Component{
+class App extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -12,7 +14,7 @@ export default class App extends Component{
 
   handleScroll(e) {
     const scroll = ReactDOM.findDOMNode(this.refs.kBody).scrollTop;
-    this.setState({scroll});
+    this.setState(Object.assign({}, this.state, {scroll}));
   }
 
   componentDidMount() {
@@ -28,7 +30,7 @@ export default class App extends Component{
   render(){
     return (
       <div className='k-wrapper'>
-        <Nav scroll={this.state.scroll}/>
+        <Nav scroll={this.state.scroll} />
         <div ref='kBody' className='k-body'>
           {this.props.children}
         </div>
@@ -36,3 +38,8 @@ export default class App extends Component{
     );
   }
 };
+
+export default connect(
+  (state)=>state, 
+  (dispatch)=>{return {dispatch}}
+)(App);
