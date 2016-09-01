@@ -30,12 +30,12 @@ module.exports = {
         include: /src/
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!sass-loader")
       },
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader!postcss-loader")
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -67,9 +67,9 @@ module.exports = {
     ]
   },
   postcss: [
-    autoprefixer({ 
-      browsers: ['last 2 versions'] 
-    }) 
+    autoprefixer({
+      browsers: ['last 3 versions', '> 1%']
+    })
   ],
   resolve: {
     extensions: ['', '.js', '.jsx']
