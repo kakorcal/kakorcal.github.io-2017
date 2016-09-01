@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -30,11 +31,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader!postcss-loader")
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -65,6 +66,11 @@ module.exports = {
       }
     ]
   },
+  postcss: [
+    autoprefixer({ 
+      browsers: ['last 2 versions'] 
+    }) 
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
