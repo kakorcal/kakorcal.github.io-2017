@@ -9,8 +9,6 @@ html, body, #root, .k-wrapper {
 .k-nav {
   background: $green;
   flex: 1 0 270px;
-  -webkit-flex-shrink: 0; 
-  -webkit-flex-basis: 270px;
   text-align: center;
   position: relative;
   padding: 10px 25px;
@@ -72,6 +70,7 @@ html, body, #root, .k-wrapper {
 .k-body {
   background: $gray;
   flex: 1 100%;
+  -webkit-box-flex: .4;
   overflow: scroll;
 }
 
