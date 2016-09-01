@@ -4,6 +4,10 @@ import angular_blog3 from '../assets/project1280x700/angular_blog3.jpg'
 import linguo1 from '../assets/project1280x700/linguo1.jpg'
 import linguo2 from '../assets/project1280x700/linguo2.jpg'
 import linguo3 from '../assets/project1280x700/linguo3.jpg'
+import bomberman1 from '../assets/project1280x700/bomberman1.jpg'
+import bomberman2 from '../assets/project1280x700/bomberman2.jpg'
+import bomberman3 from '../assets/project1280x700/bomberman3.jpg'
+import bomberman4 from '../assets/project1280x700/bomberman4.jpg'
 import michael_baca1 from '../assets/project1280x700/michael_baca1.jpg'
 import michael_baca2 from '../assets/project1280x700/michael_baca2.jpg'
 import michael_baca3 from '../assets/project1280x700/michael_baca3.jpg'
@@ -22,6 +26,10 @@ export default {
  linguo1,
  linguo2,
  linguo3,
+ bomberman1,
+ bomberman2,
+ bomberman3,
+ bomberman4,
  michael_baca1,
  michael_baca2,
  michael_baca3,

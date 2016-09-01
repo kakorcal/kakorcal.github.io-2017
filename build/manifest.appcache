@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 636b6575510d087f90f3
+# 462eb59b2aa2ac03b422
 
 /build/glyphicons-halflings-regular.f4769f9bdb7466be65088239c12046d1.eot
 /build/glyphicons-halflings-regular.448c34a56d699c29117adc64c43affeb.woff2
@@ -16,7 +16,7 @@ CACHE MANIFEST
 /build/wikirace.ef425c152e77a3409c7cef2626f2d8f5.jpg
 /build/angular_blog.0a1d57b5a6224439c2ebc43b1ceb8f3d.jpg
 /build/linguo.1727413c0ff13252e12a1253036decde.jpg
-/build/bomberman.17c960aaec18ddc6a0ec7e0857666a3a.jpg
+/build/bomberman.754c4bd0be7b7eb2ff1b8406c573628e.jpg
 /build/michael_baca.85f5ab44ccc2e4f82ea2239aa55d1cce.jpg
 /build/sara_alterman.04475367e5a4f562170b44a13f961587.jpg
 /build/angular_blog1.ec1ccbfdb42c065838b65678108213a2.jpg
@@ -25,6 +25,10 @@ CACHE MANIFEST
 /build/linguo1.44d76d65712c54e442b610087e848d9a.jpg
 /build/linguo2.eea935451add48afc6292d74f29090a5.jpg
 /build/linguo3.5055372ff7dc707a358c4515cceab3e3.jpg
+/build/bomberman1.198e7c9216d0d3bfffe85fc13a5bff68.jpg
+/build/bomberman2.1312b3b5999d00e1ae4f798345a52654.jpg
+/build/bomberman3.2a342d70b29568cc5cdfaf7bbb1fd15b.jpg
+/build/bomberman4.60511208296625ec2e90bde8ffcc2ef0.jpg
 /build/michael_baca1.488535b7e506e3db652f148a75c31f27.jpg
 /build/michael_baca2.35ea2f0ac81e13987669ac7e1a811827.jpg
 /build/michael_baca3.7adbfd832799b22953de0139e11822eb.jpg
@@ -35,12 +39,12 @@ CACHE MANIFEST
 /build/wikirace3.76120d7c7ba27f841db0e6d45b5f3e89.jpg
 /build/wikirace4.920f11e4c3f8efc8dca8cd6146a01fa0.jpg
 /build/wikirace5.517490cba79c6d309d2e4001fd9b48c7.jpg
-/build/app.846e48ce7737fa3ef6e8.js
-/build/styles.c26f466d491dc53cb209.js
-/build/vendor.6c88bee97f3e904c1e16.js
-/build/manifest.31b87ad424de39117a8c.js
-/build/styles.c26f466d491dc53cb209.css
-/build/vendor.6c88bee97f3e904c1e16.css
+/build/app.296aeb6fa58b20d23177.js
+/build/styles.30dc503fbd6f7728faff.js
+/build/vendor.cd2125fc41f0cc879a99.js
+/build/manifest.530f3cfa01b93f451cf5.js
+/build/styles.30dc503fbd6f7728faff.css
+/build/vendor.cd2125fc41f0cc879a99.css
 /build/index.html
 
 NETWORK:

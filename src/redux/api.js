@@ -60,7 +60,7 @@ const api = {
         about: 'A clone of the Bomberman series built with HTML5 canvas and Phaser.js',
         role: 'Front-end development and design'
       },
-      imagecount: 0,
+      imagecount: 4,
       github: 'https://github.com/kakorcal/bomberman',
       website: 'http://g22-bomberman.herokuapp.com/',
       technologies: {
