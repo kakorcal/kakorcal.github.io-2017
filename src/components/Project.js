@@ -161,13 +161,9 @@ class Project extends Component {
                 <a href={this.state.project.github} target='_blank' className='btn btn-default k-shadow'>
                   <i className='fa fa-github'></i> <span>GITHUB</span>
                 </a>
-                {
-                  this.state.project.website ?
-                  <a href={this.state.project.website} target='_blank' className='btn btn-default k-shadow'>
-                    <i className='fa fa-globe'></i> <span>WEBSITE</span>
-                  </a>
-                  : ''
-                }
+                <a href={this.state.project.website} target='_blank' className='btn btn-default k-shadow'>
+                  <i className='fa fa-globe'></i> <span>WEBSITE</span>
+                </a>
               </div>
             </div>
             <div className='k-desc-group'>

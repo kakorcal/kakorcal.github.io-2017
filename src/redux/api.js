@@ -62,11 +62,11 @@ const api = {
       },
       imagecount: 0,
       github: 'https://github.com/kakorcal/bomberman',
-      website: '',
+      website: 'http://g22-bomberman.herokuapp.com/',
       technologies: {
         front: ['HTML5 Canvas', 'Phaser.js'],
         back: ['Node.js', 'Express.js'],
-        tools: ['Github Pages', 'Tiled', 'TexturePacker', 'Webpack']
+        tools: ['Heroku', 'Tiled', 'TexturePacker']
       }
     },
     {
