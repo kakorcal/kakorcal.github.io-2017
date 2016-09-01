@@ -119,6 +119,10 @@ html, body, #root, .k-wrapper {
 }
 
 @media screen and (max-width: 768px) {
+  .k-wrapper {
+    display: block;
+  }
+
   .k-nav {
     display: block;
 
