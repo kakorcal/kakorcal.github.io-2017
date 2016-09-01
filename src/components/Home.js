@@ -8,23 +8,18 @@ import Thumbnails from './Thumbnails'
 
 class Home extends Component {
   constructor(props){
-    console.log('HOME GET INITIAL STATE');
     super(props);
     this.state = {
       siteVisited: false
     };
-    console.log('THIS: ', this);
   }
 
   componentWillMount(){
-    console.log('HOME COMPONENT WILL MOUNT');
     this.setState(store.getState());
   }
 
   componentDidMount(){
-    console.log('HOME COMPONENT DID MOUNT');
     if(!this.state.siteVisited){
-      console.log('HOME DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
   }

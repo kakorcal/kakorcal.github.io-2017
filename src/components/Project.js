@@ -8,7 +8,6 @@ import Images from './Images'
 
 class Project extends Component {
   constructor(props){
-    console.log('PROJECT GET INITIAL STATE');
     super(props);
     this.state = {
       project: null,
@@ -79,7 +78,6 @@ class Project extends Component {
   }
 
   handleButtonClick(e){
-    console.log('HANDLE BUTTON CLICK');
     // bug fix: 
       // when user clicks on the button with id it captures correctly
       // however, if the user clicks on the <i> element, e.target becomes <i> which doesn't have 
@@ -103,7 +101,6 @@ class Project extends Component {
   }
 
   handleKeyPress(e){
-    console.log('HANDLE KEY PRESS');
     let newState;
     switch(e.keyCode){
       case 37:
@@ -122,14 +119,11 @@ class Project extends Component {
   }
 
   componentWillMount(){
-    console.log('PROJECT COMPONENT WILL MOUNT');
     this.setState(Object.assign({}, this.updateState(this.props.location.pathname)));
   }
 
   componentDidMount(){
-    console.log('PROJECT COMPONENT DID MOUNT');
     if(!this.props.siteVisited){
-      console.log('PROJECT DISPATCH ACTION');
       this.props.dispatch(actions.turnOffAnimation());
     }
 
@@ -137,14 +131,12 @@ class Project extends Component {
   }
 
   componentDidUpdate(){
-    console.log('PROJECT COMPONENT DID UPDATE');
     ReactDOM.findDOMNode(this.refs.project).className = 'project-container';
     ReactDOM.findDOMNode(this.refs.project.parentElement).scrollTop = 0;
     ReactDOM.findDOMNode(this.refs.project).className += ' fadeInLeft';
   }
 
   componentWillUnmount(){
-    console.log('PROJECT COMPONENT WILL UNMOUNT');
     window.removeEventListener('keydown', this.handleKeyPress);
   }
 

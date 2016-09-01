@@ -8,7 +8,7 @@ const AppCachePlugin = require('appcache-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve('src'),
+    app: ['babel-polyfill' ,path.resolve('src')],
     styles: [
       path.resolve('node_modules', 'bootstrap/dist/css', 'bootstrap.css'),      
       path.resolve('node_modules', 'font-awesome/css', 'font-awesome.css'),
