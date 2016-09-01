@@ -76,7 +76,7 @@ html, body, #root, .k-wrapper {
 
 @media screen and (max-width: 1170px) {
   .k-wrapper {
-    flex-flow: column;
+    display: block;
   }
 
   .k-nav {
@@ -119,10 +119,6 @@ html, body, #root, .k-wrapper {
 }
 
 @media screen and (max-width: 768px) {
-  .k-wrapper {
-    display: block;
-  }
-
   .k-nav {
     display: block;
 
