@@ -58,6 +58,15 @@ class Project extends Component {
     return {prevIdx, nextIdx};
   }
 
+  updateState(current){
+    let project = this.setCurrentProject(current);
+    let prev = this.props.projects[this.getIndices(project.index).prevIdx];
+    let next = this.props.projects[this.getIndices(project.index).nextIdx]; 
+    let images = this.setImagePaths(project);
+
+    return {project, next, prev, images};
+  }
+
   createImages(images){
     return images.map((prop, idx)=>{
       return (
@@ -66,15 +75,6 @@ class Project extends Component {
         </div>
       );
     });
-  }
-
-  updateState(current){
-    let project = this.setCurrentProject(current);
-    let prev = this.props.projects[this.getIndices(project.index).prevIdx];
-    let next = this.props.projects[this.getIndices(project.index).nextIdx]; 
-    let images = this.setImagePaths(project);
-
-    return {project, next, prev, images};
   }
 
   handleButtonClick(e){
