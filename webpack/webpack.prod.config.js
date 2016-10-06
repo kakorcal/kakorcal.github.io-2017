@@ -96,6 +96,7 @@ module.exports = {
     new AppCachePlugin({
       exclude: ['.htaccess']
     }),
-    new ExtractTextPlugin('[name].[chunkhash].css')
+    new ExtractTextPlugin('[name].[chunkhash].css'),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };
