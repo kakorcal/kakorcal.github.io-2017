@@ -1,6 +1,9 @@
-import angular_blog1 from '../assets/project1280x700/angular_blog1.jpg'
-import angular_blog2 from '../assets/project1280x700/angular_blog2.jpg'
-import angular_blog3 from '../assets/project1280x700/angular_blog3.jpg'
+// import angular_blog1 from '../assets/project1280x700/angular_blog1.jpg'
+// import angular_blog2 from '../assets/project1280x700/angular_blog2.jpg'
+// import angular_blog3 from '../assets/project1280x700/angular_blog3.jpg'
+import flash_anzan1 from '../assets/project1280x700/flash_anzan1.jpg'
+import flash_anzan2 from '../assets/project1280x700/flash_anzan2.jpg'
+import flash_anzan3 from '../assets/project1280x700/flash_anzan3.jpg'
 import linguo1 from '../assets/project1280x700/linguo1.jpg'
 import linguo2 from '../assets/project1280x700/linguo2.jpg'
 import linguo3 from '../assets/project1280x700/linguo3.jpg'
@@ -20,9 +23,12 @@ import wikirace4 from '../assets/project1280x700/wikirace4.jpg'
 import wikirace5 from '../assets/project1280x700/wikirace5.jpg'
 
 export default {
- angular_blog1,
- angular_blog2,
- angular_blog3,
+ // angular_blog1,
+ // angular_blog2,
+ // angular_blog3,
+ flash_anzan1,
+ flash_anzan2,
+ flash_anzan3,
  linguo1,
  linguo2,
  linguo3,

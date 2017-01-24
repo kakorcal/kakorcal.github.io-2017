@@ -87,7 +87,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['styles', 'vendor', 'manifest']
     }),
     new CleanWebpackPlugin(['build'], {
       root: process.cwd(),
