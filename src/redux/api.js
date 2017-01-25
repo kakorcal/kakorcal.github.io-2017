@@ -6,7 +6,7 @@ const api = {
       projectname: 'Flash Anzan',
       date: 'Dec 2016',
       description: {
-        about: 'A mental arithmetic application where players can train their memory by calculating the sum of numbers that flash on the screen.',
+        about: 'A mental arithmetic application where players can train their memory by calculating the sum of numbers that flash on the screen',
         role: 'Full-stack development and front-end design'
       },
       imagecount: 6,
