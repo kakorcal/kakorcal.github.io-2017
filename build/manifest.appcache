@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# f84dee44d3774767ab24
+# e75a5f2ca12c89baf68e
 
 /build/glyphicons-halflings-regular.f4769f9bdb7466be65088239c12046d1.eot
 /build/glyphicons-halflings-regular.46661d6d65debc63884004fed6e37e5c.svg
@@ -12,13 +12,16 @@ CACHE MANIFEST
 /build/fontawesome-webfont.c8ddf1e5e5bf3682bc7bebf30f394148.woff
 /build/fontawesome-webfont.1dc35d25e61d819a9c357074014867ab.ttf
 /build/profile.5affa49baca11e64b3ecdb77c91d0bb6.png
-/build/angular_blog1.ec1ccbfdb42c065838b65678108213a2.jpg
-/build/angular_blog2.e1c31647c61b3344a120ed84c1acb1bc.jpg
-/build/angular_blog3.54c051e12e96a13b7965484a56e1318f.jpg
 /build/bomberman1.198e7c9216d0d3bfffe85fc13a5bff68.jpg
 /build/bomberman2.1312b3b5999d00e1ae4f798345a52654.jpg
 /build/bomberman3.2a342d70b29568cc5cdfaf7bbb1fd15b.jpg
 /build/bomberman4.60511208296625ec2e90bde8ffcc2ef0.jpg
+/build/flash_anzan1.85ca66f1147991a8e67224aa1cfc1a4a.jpg
+/build/flash_anzan2.4d471a46a3e33cddc4c21ebc1d0aa146.jpg
+/build/flash_anzan3.800897248d7da525274aaa3fdfb6ad68.jpg
+/build/flash_anzan4.1ebda6ec47c7b799e21b5a896490b648.jpg
+/build/flash_anzan5.c0e9d60db2485739ed5edbe387b1a492.jpg
+/build/flash_anzan6.7117b1d4699eecc3270da13714411327.jpg
 /build/linguo1.44d76d65712c54e442b610087e848d9a.jpg
 /build/linguo2.eea935451add48afc6292d74f29090a5.jpg
 /build/linguo3.5055372ff7dc707a358c4515cceab3e3.jpg
@@ -32,19 +35,19 @@ CACHE MANIFEST
 /build/wikirace3.76120d7c7ba27f841db0e6d45b5f3e89.jpg
 /build/wikirace4.920f11e4c3f8efc8dca8cd6146a01fa0.jpg
 /build/wikirace5.517490cba79c6d309d2e4001fd9b48c7.jpg
-/build/angular_blog.0a1d57b5a6224439c2ebc43b1ceb8f3d.jpg
 /build/bomberman.754c4bd0be7b7eb2ff1b8406c573628e.jpg
+/build/flash_anzan.5537a5769f66ebb54c64460a26eb4db0.jpg
 /build/linguo.1727413c0ff13252e12a1253036decde.jpg
 /build/michael_baca.85f5ab44ccc2e4f82ea2239aa55d1cce.jpg
 /build/sara_alterman.04475367e5a4f562170b44a13f961587.jpg
 /build/wikirace.ef425c152e77a3409c7cef2626f2d8f5.jpg
 /build/Kenneth_Korcal_Resume.83fa4ef81b221e74774e268edcbca37e.pdf
-/build/manifest.ea2ec730eb8192fcfd83.js
-/build/app.a8054df150163f618e00.js
-/build/vendor.55c97625c095a3a92d80.js
+/build/manifest.baee981d9015f054ca1f.js
+/build/app.d0d39be301124062e54b.js
+/build/vendor.661e5209aa80a606478e.js
 /build/styles.c56bf2472a2f78c55371.js
+/build/app.d0d39be301124062e54b.css
 /build/styles.c56bf2472a2f78c55371.css
-/build/vendor.55c97625c095a3a92d80.css
 /build/index.html
 
 NETWORK:

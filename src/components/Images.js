@@ -4,6 +4,9 @@
 import flash_anzan1 from '../assets/project1280x700/flash_anzan1.jpg'
 import flash_anzan2 from '../assets/project1280x700/flash_anzan2.jpg'
 import flash_anzan3 from '../assets/project1280x700/flash_anzan3.jpg'
+import flash_anzan4 from '../assets/project1280x700/flash_anzan4.jpg'
+import flash_anzan5 from '../assets/project1280x700/flash_anzan5.jpg'
+import flash_anzan6 from '../assets/project1280x700/flash_anzan6.jpg'
 import linguo1 from '../assets/project1280x700/linguo1.jpg'
 import linguo2 from '../assets/project1280x700/linguo2.jpg'
 import linguo3 from '../assets/project1280x700/linguo3.jpg'
@@ -29,6 +32,9 @@ export default {
  flash_anzan1,
  flash_anzan2,
  flash_anzan3,
+ flash_anzan4,
+ flash_anzan5,
+ flash_anzan6,
  linguo1,
  linguo2,
  linguo3,

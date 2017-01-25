@@ -76,18 +76,23 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('webpack/template.html')
+      template: path.resolve('webpack/template.html'),
+      filename: 'index.html',
+      hash: true
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
+      },
+      output: {
+        comments: false
       }
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['styles', 'vendor', 'manifest']
+      names: ['styles', 'app', 'vendor', 'manifest']
     }),
     new CleanWebpackPlugin(['build'], {
       root: process.cwd(),
