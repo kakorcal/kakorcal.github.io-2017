@@ -2,6 +2,23 @@ const api = {
   siteVisited: false,
   projects: [
     {
+      pathname: '/flash_anzan',
+      projectname: 'Flash Anzan',
+      date: 'Dec 2016',
+      description: {
+        about: 'A mental arithmetic application where players can train their memory by calculating the sum of numbers that flash on the screen.',
+        role: 'Full-stack development and front-end design'
+      },
+      imagecount: 6,
+      github: 'https://github.com/kakorcal/flash_anzan',
+      website: 'http://flashanzan.herokuapp.com/',
+      technologies: {
+        front: ['React/Redux', 'Charts.js', 'Howler', 'Axios'],
+        back: ['Node.js', 'Express.js', 'JSON Web Tokens', 'MongoDB/Mongoose', 'Bcrypt', 'PostgreSQL'],
+        tools: ['Webpack', 'Heroku']
+      }
+    },
+    {
       pathname: '/wikirace',
       projectname: 'Wikirace',
       date: 'Jul 2016',
@@ -18,23 +35,23 @@ const api = {
         tools: ['Heroku']
       }
     },
-    {
-      pathname: '/angular_blog',
-      projectname: 'Angular Blog',
-      date: 'Jun 2016',
-      description: {
-        about: "Simple single page application where users can post their blogs as well as rate other user's blogs",
-        role: 'Full-stack development and front-end design'
-      },
-      imagecount: 3,
-      github: 'https://github.com/kakorcal/angular_blog',
-      website: '',
-      technologies: {
-        front: ['Angular.js', 'Bootstrap'],
-        back: ['Node.js', 'Express.js', 'Knex.js', 'PostgreSQL'],
-        tools: ['Photoshop']
-      }
-    },
+    // {
+    //   pathname: '/angular_blog',
+    //   projectname: 'Angular Blog',
+    //   date: 'Jun 2016',
+    //   description: {
+    //     about: "Simple single page application where users can post their blogs as well as rate other user's blogs",
+    //     role: 'Full-stack development and front-end design'
+    //   },
+    //   imagecount: 3,
+    //   github: 'https://github.com/kakorcal/angular_blog',
+    //   website: '',
+    //   technologies: {
+    //     front: ['Angular.js', 'Bootstrap'],
+    //     back: ['Node.js', 'Express.js', 'Knex.js', 'PostgreSQL'],
+    //     tools: ['Photoshop']
+    //   }
+    // },
     {
       pathname: '/linguo',
       projectname: 'Linguo',
